@@ -15,7 +15,7 @@
     /users/login POST
     /users/register POST
      
-    Bei einem neuen Cluster kann mittels der folgenden Aufrufe 
+    Bei einem neuen Cluster kann mittels der folgenden Aufrufe
     der Keyspace und die Tabelle initalisiert werden:
     /create -> /messages/create -> /users/create
     """
@@ -31,7 +31,7 @@ from cassandra import ConsistencyLevel
 from cassandra.cluster import Cluster
 from cassandra.query import SimpleStatement, BatchStatement
 
-# UUID ist für Cassandra praktisch, da Keys normalerweise als UUID dargestellt werden
+# UUID ist fuer Cassandra praktisch, da Keys normalerweise als UUID dargestellt werden
 import uuid
 
 # Logger konfigurieren
@@ -41,7 +41,7 @@ handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
 log.addHandler(handler)
 
-# Keyspace für Cassandra festlegen
+# Keyspace fuer Cassandra festlegen
 KEYSPACE = "socialmessagekeyspace"
 
 # Webframework erzeugen
