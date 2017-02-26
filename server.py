@@ -53,7 +53,7 @@ def get_cassandra_session():
     Sobald die Session vorhanden ist, wird der Keyspace gesetzt """
 
     log.info("Get cluster")
-    cluster = Cluster(['cassandra_db'])
+    cluster = Cluster(['cassandradb1'])
     log.info("Connect to cluster")
     session = cluster.connect()
     log.info("setting keyspace...")
@@ -71,7 +71,7 @@ def createKeySpace():
     """ Erstellt den angegebenen Keyspace, wenn noch nicht vorhanden. """
 
     log.info("creating keyspace...")
-    cluster = Cluster(['cassandra_db'])
+    cluster = Cluster(['cassandradb1'])
     session = cluster.connect()
     session.execute("""
         CREATE KEYSPACE IF NOT EXISTS %s
